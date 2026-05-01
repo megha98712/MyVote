@@ -36,4 +36,4 @@ VoteWise Assistant is a user-friendly platform that educates citizens about demo
 
 ---
 
-## 📂 Project Structure
+
