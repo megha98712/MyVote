@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoteWise | Smart Election Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="app-header">
+        <div class="header-overlay">
+            <div class="logo-area">
+                <i data-lucide="vote"></i>
+                <h1> <span>MyVote</span></h1>
+            </div>
+            <p>Your interactive guide to democratic participation</p>
+            <div id="countdown-container" class="countdown-bar">
+                <span class="timer-label">Next Election In:</span>
+                <div id="timer">00d : 00h : 00m : 00s</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="search-wrapper">
+            <div class="search-box">
+                <i data-lucide="search"></i>
+                <input type="text" id="searchInput" placeholder="Search topics..." onkeyup="filterContent()">
+            </div>
+        </div>
+
+        <div class="main-layout">
+            <!-- Sidebar with Clickable Items -->
+            <aside class="sidebar">
+                <h3>Knowledge Base</h3>
+                <nav class="nav-menu">
+                    <button class="nav-item" onclick="handleNav(this, 'process')">
+                        <i data-lucide="refresh-cw"></i> Election Process
+                    </button>
+                    <button class="nav-item" onclick="handleNav(this, 'timeline')">
+                        <i data-lucide="calendar"></i> Important Timeline
+                    </button>
+                    <button class="nav-item" onclick="handleNav(this, 'steps')">
+                        <i data-lucide="list-checks"></i> How to Vote
+                    </button>
+                    <button class="nav-item" onclick="handleNav(this, 'eligibility')">
+                        <i data-lucide="user-check"></i> Eligibility Quiz
+                    </button>
+                    <button class="nav-item" onclick="handleNav(this, 'documents')">
+                        <i data-lucide="file-text"></i> Required Documents
+                    </button>
+                </nav>
+
+                <div class="sidebar-footer">
+                    <div class="alert-box">
+                        <h4><i data-lucide="megaphone"></i> Live Updates</h4>
+                        <p>Voter registration is now OPEN.</p>
+                        <a href="https://voters.eci.gov.in/" target="_blank">Register Now →</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Dynamic Output Card -->
+            <section class="content-view">
+                <div id="output" class="content-card">
+                    <div class="welcome-screen">
+                        <i data-lucide="info" size="48" stroke-width="1.5"></i>
+                        <h2>Welcome to VoteWise</h2>
+                        <p>Select a category from the Knowledge Base to start learning.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="app-footer">
+        <div class="footer-links">
+            <a href="https://voters.eci.gov.in/" target="_blank"><i data-lucide="external-link"></i> Voter Portal</a>
+            <a href="#"><i data-lucide="help-circle"></i> Help Desk</a>
+        </div>
+        <p>&copy; 2026 VoteWise Assistant • Empowering Voters</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
